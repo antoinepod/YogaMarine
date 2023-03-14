@@ -22,12 +22,12 @@ const router = useRouter();
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 50px;
-  margin-top: 15px
+  margin: 15px 50px 0;
 }
 
 img {
-  height: 100%;
+  height: 120px;
+  cursor: pointer;
 }
 
 .titles {
@@ -56,9 +56,9 @@ img {
   left: 0;
   bottom: 0;
   width: 100%;
-  margin-left: 0%;
+  margin-left: 0;
   transform: scaleX(0);
-  background-color: #4e69ef;
+  background-color: currentColor;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -67,4 +67,9 @@ img {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.router-link-active {
+  color: #153adc;
+}
+
 </style>
