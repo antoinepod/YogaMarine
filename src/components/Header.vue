@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <img src="/logo.jpg" alt="" />
+    <img src="/logo.jpg" alt="" @click="router.push('/')" />
     <div class="titles">
-      <RouterLink to="/" class="title">Qui suis-je</RouterLink>
+      <RouterLink to="/qui-suis-je" class="title">Qui suis-je</RouterLink>
       <RouterLink to="/yoga-vinyasa" class="title">Yoga Vinyasa</RouterLink>
       <RouterLink to="/demande-et-reservation" class="title">Demande et réservation</RouterLink>
       <RouterLink to="/contact" class="title">Contact</RouterLink>
@@ -11,12 +11,14 @@
 </template>
 
 <script setup>
-import { RouterLink } from "vue-router";
+import { RouterLink, useRouter } from "vue-router";
+
+const router = useRouter();
 </script>
 
 <style scoped>
 .container {
-  height: 100px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;

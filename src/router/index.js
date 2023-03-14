@@ -1,5 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import AboutMeView from '@/views/AboutMeView.vue'
+import YogaVinyasaView from '@/views/YogaVinyasaView.vue'
+import ReservationView from '@/views/ReservationView.vue'
+import ContactView from '@/views/ContactView.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
 
 const router = createRouter({
@@ -11,19 +15,24 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/qui-suis-je',
+      name: 'Qui suis-je',
+      component: AboutMeView
+    },
+    {
       path: '/yoga-vinyasa',
       name: "Yoga Vinyasa",
-      component: NotFoundView
+      component: YogaVinyasaView
     },
     {
       path: '/demande-et-reservation',
       name: "Demande et réservation",
-      component: NotFoundView
+      component: ReservationView
     },
     {
       path: '/contact',
       name: 'Contact',
-      component: NotFoundView
+      component: ContactView
     },
     {
       path: "/:catchall(.*)*",

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <h1>Home - HomeView</h1>
+  <h1>Yoga Vinyasa - YogaVinyasaView</h1>
 </template>
 
 <style scoped>
