@@ -1,26 +1,26 @@
 <template>
-  <Header />
   <div class="container">
-    <RouterView />
-  </div>
-  <div class="footer-container">
-    <Footer />
+    <Header/>
+    <RouterView/>
+    <div class="footer-container">
+      <Footer/>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { RouterView } from "vue-router";
+import {RouterView} from "vue-router";
 
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 </script>
 
 <style scoped>
-/*.container {*/
-/*  background-image: url("/wave-line.svg");*/
-/*  height: 100vh;*/
-/*  width: 100vw;*/
-/*}*/
+.container {
+  /*background-color: red;*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+}
 
 .footer-container {
   height: 40px;

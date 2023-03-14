@@ -1,7 +1,9 @@
 <template>
   <div class="container">
-    <img src="/logo.jpg" alt="" @click="router.push('/')" />
-    <div class="titles">
+    <button>
+      <img src="/logo.png" alt="" @click="router.push('/')"/>
+    </button>
+    <div class="titles-container">
       <RouterLink to="/qui-suis-je" class="title">Qui suis-je</RouterLink>
       <RouterLink to="/yoga-vinyasa" class="title">Yoga Vinyasa</RouterLink>
       <RouterLink to="/demande-et-reservation" class="title">Demande et réservation</RouterLink>
@@ -11,26 +13,38 @@
 </template>
 
 <script setup>
-import { RouterLink, useRouter } from "vue-router";
+import {RouterLink, useRouter} from "vue-router";
 
 const router = useRouter();
 </script>
 
 <style scoped>
 .container {
-  height: 120px;
+  height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 15px 50px 0;
 }
-
-img {
-  height: 120px;
-  cursor: pointer;
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
-.titles {
+img {
+  height: 18vh;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-out;
+}
+
+img:hover,
+img:focus {
+  box-shadow: 0.5em 0.5em 0.5em -0.4em #4e69ef;
+  transition: box-shadow 0.2s ease-out;
+}
+
+.titles-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -69,7 +83,7 @@ img {
 }
 
 .router-link-active {
-  color: #153adc;
+  color: #0030ff;
 }
 
 </style>

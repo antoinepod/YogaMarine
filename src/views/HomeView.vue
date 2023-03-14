@@ -6,7 +6,8 @@
     <div class="text-container">
       <h3>
         Bienvenue dans cet univers personnel et professionnel.<br>
-        Intéressée par les sujets du développement humain, j’explore l'approche du corps, de l'esprit et de la vie, notamment par le yoga.
+        Intéressée par les sujets du développement humain, j’explore l'approche du corps,<br>
+        de l'esprit et de la vie, notamment par le yoga.
       </h3>
       <h1>
         Professeure diplomée d'un 200h accrédité Yoga Alliances<br>Tous droits réservés<br>CGV
@@ -20,7 +21,7 @@
 .container {
   height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin: 50px
 }

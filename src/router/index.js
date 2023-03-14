@@ -4,7 +4,6 @@ import AboutMeView from '@/views/AboutMeView.vue'
 import YogaVinyasaView from '@/views/YogaVinyasaView.vue'
 import ReservationView from '@/views/ReservationView.vue'
 import ContactView from '@/views/ContactView.vue'
-import NotFoundView from '@/views/NotFoundView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,8 +35,7 @@ const router = createRouter({
     },
     {
       path: "/:catchall(.*)*",
-      name: "NotFound",
-      component: NotFoundView
+      redirect: '/'
     }
   ]
 })
