@@ -1,89 +1,90 @@
 <template>
   <div class="container">
-    <button>
-      <img src="/logo.png" alt="" @click="router.push('/')"/>
-    </button>
-    <div class="titles-container">
-      <RouterLink to="/qui-suis-je" class="title">Qui suis-je</RouterLink>
-      <RouterLink to="/yoga-vinyasa" class="title">Yoga Vinyasa</RouterLink>
-      <RouterLink to="/demande-et-reservation" class="title">Demande et réservation</RouterLink>
-      <RouterLink to="/contact" class="title">Contact</RouterLink>
-    </div>
+    <RouterLink to="/" class="image"><img src="/logo.png" alt=""/></RouterLink>
+    <RouterLink to="/qui-suis-je" class="title">Qui suis-je</RouterLink>
+    <RouterLink to="/yoga-vinyasa" class="title">Yoga Vinyasa</RouterLink>
+    <RouterLink to="/demande-et-reservation" class="title">Demande et réservation</RouterLink>
+    <RouterLink to="/contact" class="title">Contact</RouterLink>
   </div>
 </template>
 
 <script setup>
-import {RouterLink, useRouter} from "vue-router";
-
-const router = useRouter();
 </script>
 
 <style scoped>
 .container {
-  height: 15vh;
+  height: 13vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15px 50px 0;
+  margin: 30px 50px 15px;
 }
-button {
-  background-color: transparent;
-  border: none;
-  outline: none;
+
+.image {
+  height: 18vh;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  border-radius: 10px;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+  -6px -6px 10px rgba(255, 255, 255, .5),
+  6px 6px 8px rgba(255, 255, 255, .075),
+  6px 6px 10px rgba(0, 0, 0, .15);
 }
 
 img {
-  height: 18vh;
-  cursor: pointer;
-  transition: box-shadow 0.2s ease-out;
+  height: 100%;
 }
 
-img:hover,
-img:focus {
-  box-shadow: 0.5em 0.5em 0.5em -0.4em #4e69ef;
-  transition: box-shadow 0.2s ease-out;
+.image:hover {
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+  -2px -2px 4px rgba(255, 255, 255, .4),
+  2px 2px 2px rgba(255, 255, 255, .05),
+  2px 2px 4px rgba(0, 0, 0, .1);
 }
 
-.titles-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 20px 50px;
+.image:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+  inset -2px -2px 4px rgba(255, 255, 255, .5),
+  inset 2px 2px 2px rgba(255, 255, 255, .075),
+  inset 2px 2px 4px rgba(0, 0, 0, .15);
 }
 
 .title {
+  height: 8vh;
   color: #4e69ef;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 25px;
   cursor: pointer;
-  display: inline-block;
-  position: relative;
   text-decoration: none;
+  transition: .2s ease-in-out;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+  -6px -6px 10px rgba(255, 255, 255, .5),
+  6px 6px 8px rgba(255, 255, 255, .075),
+  6px 6px 10px rgba(0, 0, 0, .15);
 }
 
-.title::after {
-  content: '';
-  position: absolute;
-  border-radius: 20px;
-  height: 2.5px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  margin-left: 0;
-  transform: scaleX(0);
-  background-color: currentColor;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+.title:hover {
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+  -2px -2px 4px rgba(255, 255, 255, .4),
+  2px 2px 2px rgba(255, 255, 255, .05),
+  2px 2px 4px rgba(0, 0, 0, .1);
 }
 
-.title:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.title:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+  inset -2px -2px 4px rgba(255, 255, 255, .5),
+  inset 2px 2px 2px rgba(255, 255, 255, .075),
+  inset 2px 2px 4px rgba(0, 0, 0, .15);
 }
 
 .router-link-active {
-  color: #0030ff;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+  -2px -2px 4px rgba(255, 255, 255, .4),
+  2px 2px 2px rgba(255, 255, 255, .05),
+  2px 2px 4px rgba(0, 0, 0, .1);
 }
 
 </style>
