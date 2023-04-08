@@ -39,7 +39,7 @@ const router = useRouter();
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 4% 8% 0;
+  margin: 0% 8% 0;
   flex-direction: column;
   text-align: justify;
 }
@@ -54,7 +54,7 @@ strong {
 }
 
 .link {
-  color: #4e69ef;
+  color: #1F6AFD;
   font-weight: bolder;
 }
 

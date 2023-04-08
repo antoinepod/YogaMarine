@@ -30,6 +30,13 @@
   --color-text: var(--vt-c-text-light-1);
 
   --section-gap: 160px;
+
+
+  --blue-logo: #1F6AFD;
+  --blue-intense: #0000E2;
+  --blue-buttons: #085BF8;
+
+  --orange-bg: #EF490C;
 }
 
 *,

@@ -20,7 +20,6 @@ const router = useRouter();
 
 <style scoped>
 .container {
-  height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,11 +35,12 @@ img {
   height: 18vh;
   cursor: pointer;
   transition: box-shadow 0.2s ease-out;
+  border-radius: 8px;
 }
 
 img:hover,
 img:focus {
-  box-shadow: 0.5em 0.5em 0.5em -0.4em #4e69ef;
+  box-shadow: 0.5em 0.5em 0.5em -0.4em #1F6AFD;
   transition: box-shadow 0.2s ease-out;
 }
 
@@ -52,7 +52,7 @@ img:focus {
 }
 
 .title {
-  color: #4e69ef;
+  color: #085BF8;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 25px;
@@ -83,7 +83,7 @@ img:focus {
 }
 
 .router-link-active {
-  color: #0030ff;
+  color: #0000E2;
 }
 
 </style>

@@ -1,26 +1,64 @@
 <template>
   <footer>
-    <p>2023 - Created by <a target="_blank" href="https://www.linkedin.com/in/antoine-podvin/">Antoine Podvin</a></p>
+    <p><b>MENTIONS LÉGALES – CGV</b></p>
+    <p>©2023 YOGAMARINE - Site crée par <a target="_blank" href="https://www.linkedin.com/in/antoine-podvin/">Antoine Podvin</a></p>
+    <div class="links">
+      <a class="mail" target="_blank" href="mailto:contact@yogamarine.fr"><i class="fa fa-envelope"></i>  contact@yogamarine.fr</a>
+      <a class="instagram" target="_blank" href="https://www.instagram.com/_yogamarine_/"><i class="fa fa-instagram"></i>  _yogamarine_</a>
+    </div>
   </footer>
 </template>
   
 <style scoped>
 p {
   margin: 0;
-  font-size: 0.8em;
+  font-size: 1em;
+  width: 33%;
 }
 
 p a {
-  color: aliceblue;
+  color: #0000E2;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 20px;
-  background-color: #4e69ef;
   text-align: center;
-  color: whitesmoke;
+  color: #0000E2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
 }
+
+b {
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+}
+
+.mail {
+  color: black;
+  text-decoration: none;
+}
+
+.mail:hover {
+  color: #1F88E5;
+  text-decoration: underline;
+}
+
+.instagram {
+  color: black;
+  text-decoration: none;
+}
+
+.instagram:hover {
+  color: #833AB4;
+  text-decoration: underline;
+}
+
 </style>

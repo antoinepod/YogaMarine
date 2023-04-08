@@ -1,10 +1,8 @@
 <template>
   <div class="container">
-    <Header/>
-    <RouterView/>
-    <div class="footer-container">
-      <Footer/>
-    </div>
+    <Header class="header"/>
+    <RouterView class="router"/>
+    <Footer class="footer"/>
   </div>
 </template>
 
@@ -17,12 +15,25 @@ import Footer from "@/components/Footer.vue";
 
 <style scoped>
 .container {
-  /*background-color: red;*/
-  /*margin: 0;*/
-  /*padding: 0;*/
+  margin: 0;
+  /* background-color: brown; */
 }
 
-.footer-container {
-  height: 40px;
+.header {
+  height: 15vh;
+  /* background-color: green; */
+}
+
+.router {
+  min-height: 75vh;
+  /* background-color: red; */
+}
+
+.footer {
+  height: 10vh;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* background-color: yellow; */
 }
 </style>
