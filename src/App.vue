@@ -20,12 +20,12 @@ import Footer from "@/components/Footer.vue";
 }
 
 .header {
-  height: 15vh;
+  height: 18vh;
   /* background-color: green; */
 }
 
 .router {
-  min-height: 75vh;
+  min-height: 70vh;
   /* background-color: red; */
 }
 

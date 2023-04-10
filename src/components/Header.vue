@@ -1,4 +1,7 @@
 <template>
+  <div class="top-header">
+    <p>Bienvenue dans cet univers personel et professionnel de bien être.</p>
+  </div>
   <div class="container">
     <button>
       <img src="/logo.png" alt="" @click="router.push('/')"/>
@@ -19,7 +22,18 @@ const router = useRouter();
 </script>
 
 <style scoped>
+.top-header {
+  background-color: #1F6AFD;
+  height: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* font-weight: bold; */
+}
+
 .container {
+  height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;

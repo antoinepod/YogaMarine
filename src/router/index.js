@@ -4,6 +4,7 @@ import AboutMeView from '@/views/AboutMeView.vue'
 import YogaVinyasaView from '@/views/YogaVinyasaView.vue'
 import ReservationView from '@/views/ReservationView.vue'
 import ContactView from '@/views/ContactView.vue'
+import LegalView from '@/views/LegalView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/contact',
       name: 'Contact',
       component: ContactView
+    },
+    {
+      path: '/mentions-legales-cgv',
+      name: 'Mentions légales - CGV',
+      component: LegalView
     },
     {
       path: "/:catchall(.*)*",

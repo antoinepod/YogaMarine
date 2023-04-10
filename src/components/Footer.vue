@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p><b>MENTIONS LÉGALES – CGV</b></p>
+    <RouterLink to="/mentions-legales-cgv" class="title">MENTIONS LÉGALES – CGV</RouterLink>
     <p>©2023 YOGAMARINE - Site crée par <a target="_blank" href="https://www.linkedin.com/in/antoine-podvin/">Antoine Podvin</a></p>
     <div class="links">
       <a class="mail" target="_blank" href="mailto:contact@yogamarine.fr"><i class="fa fa-envelope"></i>  contact@yogamarine.fr</a>
@@ -17,20 +17,32 @@ p {
 }
 
 p a {
-  color: #0000E2;
+  color: black;
+}
+
+p a:hover {
+  color: #085BF8;
+}
+
+.title {
+  width: 33%;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.title:hover {
+  color: #085BF8;
+  text-decoration: underline;
 }
 
 footer {
   text-align: center;
-  color: #0000E2;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
-}
-
-b {
-  font-weight: bold;
 }
 
 .links {
