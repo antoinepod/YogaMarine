@@ -1,39 +1,40 @@
 <template>
-  <div class="container">
-    <Header class="header"/>
-    <RouterView class="router"/>
-    <Footer class="footer"/>
-  </div>
+  <body>
+    <div class="header-container">
+      <Header></Header>
+    </div>
+
+    <div class="scroll-container">
+      <RouterView class="router" />
+    </div>
+  </body>
 </template>
 
 <script setup>
-import {RouterView} from "vue-router";
+import { RouterView } from "vue-router";
 
 import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
 </script>
 
 <style scoped>
-.container {
+body {
   margin: 0;
-  /* background-color: brown; */
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
-.header {
-  height: 18vh;
-  /* background-color: green; */
+.header-container {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
 .router {
-  min-height: 70vh;
-  /* background-color: red; */
-}
-
-.footer {
-  height: 10vh;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  /* background-color: yellow; */
+  width: 100vw;
+  height: 96vh;
+  margin: 0;
+  padding: 0;
 }
 </style>

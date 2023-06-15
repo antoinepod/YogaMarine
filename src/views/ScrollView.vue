@@ -1,0 +1,66 @@
+<template>
+  <div class="scroll-container" @scroll.passive="onScroll()" ref="scroll">
+    <HomeView id="accueil" class="section home" />
+    <AboutMeView id="qui-suis-je" class="section about-me" />
+    <YogaVinyasaView id="yoga-vinyasa" class="section yoga-vinyasa" />
+    <LessonsView id="cours-et-prestations" class="section lessons" />
+    <ContactView id="contact" class="section contact" />
+  </div>
+</template>
+
+<script setup>
+import HomeView from "@/views/scroll/HomeView.vue";
+import AboutMeView from "@/views/scroll/AboutMeView.vue";
+import YogaVinyasaView from "@/views/scroll/YogaVinyasaView.vue";
+import LessonsView from "@/views/scroll/LessonsView.vue";
+import ContactView from "@/views/scroll/ContactView.vue";
+
+import { onBeforeMount, ref } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const scroll = ref(null);
+
+const pages = [
+  'accueil',
+  'qui-suis-je',
+  'yoga-vinyasa',
+  'cours-et-prestations',
+  'contact'
+]
+
+function onScroll() {
+  const page = Math.round(5 * scroll.value.scrollTop / scroll.value.scrollHeight);
+  console.log(page, pages[page]);
+  router.push({ name: "Scroll", hash: `#${pages[page]}` });
+}
+
+onBeforeMount(() => {
+  router.push({ name: "Scroll", hash: "#accueil" });
+});
+</script>
+
+<style scoped>
+.scroll-container {
+  top: 4vh;
+  width: 100vw;
+  height: 96vh;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+</style>

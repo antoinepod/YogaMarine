@@ -1,103 +1,130 @@
 <template>
-  <div class="top-header">
-    <p>Bienvenue dans cet univers personel et professionnel de bien être.</p>
-  </div>
-  <div class="container">
-    <button>
-      <img src="/logo.png" alt="" @click="router.push('/')"/>
-    </button>
-    <div class="titles-container">
-      <RouterLink to="/qui-suis-je" class="title">Qui suis-je</RouterLink>
-      <RouterLink to="/yoga-vinyasa" class="title">Yoga Vinyasa</RouterLink>
-      <RouterLink to="/demande-et-reservation" class="title">Demande et réservation</RouterLink>
-      <RouterLink to="/contact" class="title">Contact</RouterLink>
+  <div class="header-container">
+    <div class="top-header">
+      <p>Bienvenue dans cet univers personnel et professionnel de bien être.</p>
+    </div>
+    <div class="nav-container">
+      <a href="#accueil">
+        <img src="/logo.png" alt="" />
+      </a>
+      <div class="titles-container">
+        <a v-for="page in pages" :href="page.href" :class="isActive(page.href)">{{ page.title }}</a>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import {RouterLink, useRouter} from "vue-router";
+import { useRouter } from "vue-router";
 
 const router = useRouter();
+
+function isActive(text) {
+  if (text === router.currentRoute.value.hash)
+    return 'active';
+  return 'inactive';
+};
+
+const pages = [
+  { href: '#qui-suis-je', title: "Qui suis-je" },
+  { href: '#yoga-vinyasa', title: "Yoga Vinyasa" },
+  { href: '#cours-et-prestations', title: "Cours et prestations" },
+  { href: '#contact', title: "Contact" }
+]
 </script>
 
-<style scoped>
-.top-header {
-  background-color: #1F6AFD;
-  height: 3vh;
+<style lang="scss" scoped>
+.header-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  color: white;
-  /* font-weight: bold; */
-}
 
-.container {
-  height: 15vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 15px 50px 0;
-}
-button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
+  .top-header {
+    background-color: var(--blue-logo);
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 2vh;
+    width: 100%;
 
-img {
-  height: 18vh;
-  cursor: pointer;
-  transition: box-shadow 0.2s ease-out;
-  border-radius: 8px;
-}
+    p {
+      text-align: center;
+    }
+  }
 
-img:hover,
-img:focus {
-  box-shadow: 0.5em 0.5em 0.5em -0.4em #1F6AFD;
-  transition: box-shadow 0.2s ease-out;
-}
+  .nav-container {
+    height: 15vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.titles-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 20px 50px;
-}
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
 
-.title {
-  color: #085BF8;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 25px;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-}
+    img {
+      height: 18vh;
+      cursor: pointer;
+      transition: box-shadow 0.2s ease-out;
+      border-radius: 8px;
+      margin: 4vh 0 0 4vw;
 
-.title::after {
-  content: '';
-  position: absolute;
-  border-radius: 20px;
-  height: 2.5px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  margin-left: 0;
-  transform: scaleX(0);
-  background-color: currentColor;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
+      &:hover,
+      &:focus {
+        box-shadow: 0.5em 0.5em 0.5em -0.4em var(--blue-logo);
+        transition: box-shadow 0.2s ease-out;
+      }
+    }
 
-.title:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
+    .titles-container {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
 
-.router-link-active {
-  color: #0000E2;
-}
+      a {
+        color: var(--blue-buttons);
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
 
+        &::after {
+          content: '';
+          position: absolute;
+          border-radius: 20px;
+          height: 2.5px;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          margin-left: 0;
+          transform: scaleX(0);
+          background-color: currentColor;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+
+        &:hover {
+          color: var(--blue-buttons);
+
+          ::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+        }
+      }
+
+      .active {
+        color: white;
+      }
+    }
+  }
+}
 </style>
