@@ -65,13 +65,13 @@ body {
 @font-face {
   font-family: "Lovelo";
   src: local("Lovelo"),
-    url("Lovelo Black.otf") format("truetype");
+    url("/Lovelo Black.otf") format("truetype");
   font-family: "OpenSans";
   src: local("OpenSans"),
-    url("OpenSans-Regular.ttf") format("truetype");
+    url("/OpenSans-Regular.ttf") format("truetype");
   font-family: "Nourd";
   src: local("Nourd"),
-    url("nourd_light.ttf") format("truetype");
+    url("/nourd_light.ttf") format("truetype");
 }
 
 p {
