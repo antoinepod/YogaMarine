@@ -4,6 +4,7 @@
     <AboutMeView id="qui-suis-je" class="section about-me" />
     <YogaVinyasaView id="yoga-vinyasa" class="section yoga-vinyasa" />
     <LessonsView id="cours-et-prestations" class="section lessons" />
+    <LessonsView2 id="cours-et-prestations2" class="section lessons" />
     <ContactView id="contact" class="section contact" />
   </div>
 </template>
@@ -14,6 +15,7 @@ import AboutMeView from "@/views/scroll/AboutMeView.vue";
 import YogaVinyasaView from "@/views/scroll/YogaVinyasaView.vue";
 import LessonsView from "@/views/scroll/LessonsView.vue";
 import ContactView from "@/views/scroll/ContactView.vue";
+import LessonsView2 from "@/views/scroll/LessonsView2.vue";
 
 import { onBeforeMount, ref } from "vue";
 import { useRouter } from "vue-router";
@@ -26,11 +28,12 @@ const pages = [
   'qui-suis-je',
   'yoga-vinyasa',
   'cours-et-prestations',
+  'cours-et-prestations',
   'contact'
 ]
 
 function onScroll() {
-  const page = Math.round(5 * scroll.value.scrollTop / scroll.value.scrollHeight);
+  const page = Math.round(pages.length * scroll.value.scrollTop / scroll.value.scrollHeight);
   console.log(page, pages[page]);
   router.push({ name: "Scroll", hash: `#${pages[page]}` });
 }

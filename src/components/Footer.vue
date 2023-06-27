@@ -29,7 +29,7 @@ footer {
   text-align: center;
   color: v-bind(color);
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: space-between;
   flex-direction: row;
 
@@ -38,6 +38,7 @@ footer {
     font-weight: bold;
     text-decoration: none;
     color: v-bind(color);
+    font-size: 2vh;
   }
 
   .legal:hover {
@@ -47,7 +48,7 @@ footer {
 
   p {
     margin: 0;
-    font-size: 1em;
+    font-size: 2vh;
     width: 33%;
 
     a {
@@ -65,6 +66,7 @@ footer {
     align-items: center;
     justify-content: center;
     width: 33%;
+    font-size: 2vh;
 
     .mail {
       color: v-bind(color);

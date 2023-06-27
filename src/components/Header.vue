@@ -90,35 +90,31 @@ const pages = [
         color: var(--blue-buttons);
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 3vh;
         cursor: pointer;
         display: inline-block;
         position: relative;
         text-decoration: none;
+      }
 
-        &::after {
-          content: '';
-          position: absolute;
-          border-radius: 20px;
-          height: 2.5px;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          margin-left: 0;
-          transform: scaleX(0);
-          background-color: currentColor;
-          transform-origin: bottom right;
-          transition: transform 0.25s ease-out;
-        }
+      a::after {
+        content: '';
+        position: absolute;
+        border-radius: 20px;
+        height: 2.5px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin-left: 0;
+        transform: scaleX(0);
+        background-color: currentColor;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
 
-        &:hover {
-          color: var(--blue-buttons);
-
-          ::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-          }
-        }
+      a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
 
       .active {

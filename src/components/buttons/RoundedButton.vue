@@ -21,13 +21,14 @@ button {
   background-color: #1F6AFD;
   border: 0;
   border-radius: 20px;
-  padding: 0.5em 1em;
+  padding: 1vh 2vh;
   color: aliceblue;
   cursor: pointer;
   text-transform: uppercase;
   transition: transform 0.2s ease-out, box-shadow 0.25s ease-out;
   font-family: 'Lovelo';
   font-weight: bold;
+  font-size: 2vh;
 
   &:hover,
   &:focus {

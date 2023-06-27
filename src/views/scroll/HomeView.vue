@@ -52,6 +52,6 @@ import Footer from "@/components/Footer.vue";
 }
 
 .subtitle {
-  font-size: 1rem;
+  font-size: 2vh;
 }
 </style>
