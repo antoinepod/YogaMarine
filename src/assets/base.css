@@ -62,16 +62,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+/* Lovelo */
 @font-face {
   font-family: "Lovelo";
-  src: local("Lovelo"),
-    url("/Lovelo Black.otf") format("truetype");
-  font-family: "OpenSans";
-  src: local("OpenSans"),
-    url("/OpenSans-Regular.ttf") format("truetype");
+  src: url("/Lovelo Black.otf") format("opentype");
+}
+
+/* Nourd */
+@font-face {
   font-family: "Nourd";
-  src: local("Nourd"),
-    url("/nourd_light.ttf") format("truetype");
+  src: url("/nourd_light.ttf") format("truetype");
 }
 
 p {
@@ -79,7 +80,12 @@ p {
   font-size: 1.8vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Lovelo";
   font-weight: bold;
 }
