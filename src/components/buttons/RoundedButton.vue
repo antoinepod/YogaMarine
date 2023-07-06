@@ -1,9 +1,11 @@
 <template>
-  <button>
-    <a v-if="href" :href="href" target="_blank">
+  <a v-if="href" :href="href" :target="target">
+    <button>
       <slot></slot>
-    </a>
-    <slot v-else></slot>
+    </button>
+  </a>
+  <button v-else>
+    <slot></slot>
   </button>
 </template>
 
@@ -12,6 +14,11 @@ defineProps({
   href: {
     type: String,
     required: false
+  },
+  target: {
+    type: String,
+    required: false,
+    default: ""
   }
 });
 </script>
@@ -20,7 +27,7 @@ defineProps({
 button {
   background-color: #1F6AFD;
   border: 0;
-  border-radius: 20px;
+  border-radius: 2em;
   padding: 1vh 2vh;
   color: aliceblue;
   cursor: pointer;

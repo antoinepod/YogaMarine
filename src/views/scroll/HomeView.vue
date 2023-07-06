@@ -24,7 +24,7 @@
 import Footer from "@/components/Footer.vue";
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .home-container {
   height: 100%;
   display: flex;

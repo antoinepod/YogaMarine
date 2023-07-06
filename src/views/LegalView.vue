@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .legal-container {
   width: 100vw;
   height: 100vh;

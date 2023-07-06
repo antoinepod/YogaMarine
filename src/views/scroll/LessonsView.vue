@@ -10,7 +10,7 @@
             Mars 2023 - Mai 2023 au studio Salty Days, 12 rue d'Angleterre, 59800 Lille.<br>
             Je réfléchis à de nouveaux lieux et formes pour dispenser des cours de yoga, accessibles et inclusifs.
           </p>
-          <RoundedButton class="button up" href="https://www.instagram.com/_yogamarine_/">
+          <RoundedButton class="button up" href="https://www.instagram.com/_yogamarine_/" target="_blank">
             infos studios sur instagram
           </RoundedButton>
         </div>
@@ -21,7 +21,7 @@
           <h4>
             ● des cours de yoga pour vos salariés, au sein de vos espaces de sport ou locaux d'entreprise adaptés
           </h4>
-          <RoundedButton class="button" href="https://www.instagram.com/_yogamarine_/">
+          <RoundedButton class="button" href="https://www.instagram.com/_yogamarine_/" target="_blank">
             prenons soin de vos collaborateurs
           </RoundedButton>
         </div>
@@ -37,7 +37,7 @@
             <p>
               Séminaire, team building entreprise, retraite yoga bien-être, collaboration, café...
             </p>
-            <RoundedButton class="button" href="https://www.instagram.com/_yogamarine_/">
+            <RoundedButton class="button" href="https://www.instagram.com/_yogamarine_/" target="_blank">
               discutons en
             </RoundedButton>
           </div>

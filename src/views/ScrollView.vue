@@ -1,4 +1,7 @@
 <template>
+  <div class="header-container">
+    <Header></Header>
+  </div>
   <div class="scroll-container" @scroll.passive="onScroll()" ref="scroll">
     <HomeView id="accueil" class="section home" />
     <AboutMeView id="qui-suis-je" class="section about-me" />
@@ -10,6 +13,7 @@
 </template>
 
 <script setup>
+import Header from "@/components/Header.vue";
 import HomeView from "@/views/scroll/HomeView.vue";
 import AboutMeView from "@/views/scroll/AboutMeView.vue";
 import YogaVinyasaView from "@/views/scroll/YogaVinyasaView.vue";
@@ -43,7 +47,14 @@ onBeforeMount(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.header-container {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
 .scroll-container {
   top: 4vh;
   width: 100vw;
@@ -52,18 +63,16 @@ onBeforeMount(() => {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
-}
 
-.scroll-container::-webkit-scrollbar {
-  display: none;
-}
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
-.section {
-  width: 100%;
-  height: 100%;
-  scroll-snap-align: start;
+  .section {
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+  }
 }
 </style>
