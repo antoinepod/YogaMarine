@@ -37,10 +37,15 @@ button {
   font-weight: bold;
   font-size: 2vh;
 
-  &:hover,
-  &:focus {
+  &:hover {
     box-shadow: 0 0.5em 0.5em -0.4em #1F6AFD;
     transform: translateY(-0.2em);
+    transition: transform 0.2s ease-out, box-shadow 0.25s ease-out;
+  }
+
+  &:active {
+    box-shadow: 0 0.5em 0.5em -0.4em #1F6AFD;
+    transform: translateY(-0.1em);
     transition: transform 0.2s ease-out, box-shadow 0.25s ease-out;
   }
 
