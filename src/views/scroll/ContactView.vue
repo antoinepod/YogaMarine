@@ -40,6 +40,9 @@ import Footer from "@/components/Footer.vue";
     justify-content: top;
     align-items: top;
     flex-direction: row;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
     height: 100%;
 
     .left-container {
@@ -48,6 +51,9 @@ import Footer from "@/components/Footer.vue";
       align-items: center;
       flex-direction: column;
       width: 45%;
+      @media screen and (max-width: 768px) {
+        width: 90vw;
+      }
       height: 100%;
       padding: 2%;
       margin-top: 3%;
@@ -65,6 +71,9 @@ import Footer from "@/components/Footer.vue";
 
       .instagram-embed {
         margin-top: -1.2rem;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
         width: 70%;
         height: 100%;
       }
@@ -76,10 +85,13 @@ import Footer from "@/components/Footer.vue";
 
 
     img {
-      position: relative;
-      top: 0;
-      right: 0;
       width: 50%;
+      @media screen and (max-width: 768px) {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 4rem;
+        border-radius: 1rem;
+      }
       margin-bottom: 10%;
       object-fit: cover;
     }
@@ -90,7 +102,7 @@ import Footer from "@/components/Footer.vue";
     position: absolute;
     bottom: 1rem;
     width: 100%;
-    height: 3rem;
+    height: 2rem;
   }
 }
 </style>

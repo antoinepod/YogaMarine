@@ -35,7 +35,7 @@
     <RoundedButton class="reservation-button" href="#cours-et-prestations">
       mes cours et prestations
     </RoundedButton>
-    <Footer class="footer" color="black"></Footer>
+    <!-- <Footer class="footer" color="black"></Footer> -->
   </div>
 </template>
 
@@ -58,7 +58,7 @@ import Footer from "@/components/Footer.vue";
     justify-content: top;
     align-items: top;
     flex-direction: row;
-    height: 80%;
+    height: 85%;
 
     img {
       position: relative;
@@ -76,6 +76,7 @@ import Footer from "@/components/Footer.vue";
       text-align: justify;
       text-justify: inter-word;
       color: black;
+      overflow: auto;
 
       h4 {
         text-align: right;

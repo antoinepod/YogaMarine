@@ -16,7 +16,7 @@
           soit votre niveau ou connaissance du Yoga</u>.
       </p>
     </div>
-    <Footer class="footer" color="white"></Footer>
+    <!-- <Footer class="footer" color="white"></Footer> -->
   </div>
 </template>
 

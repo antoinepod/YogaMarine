@@ -42,14 +42,21 @@ const pages = [
   .top-header {
     background-color: var(--blue-logo);
     height: 4vh;
+    @media screen and (max-width: 768px) {
+      height: 4vh;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     padding-top: 2vh;
     width: 100%;
+    
 
     p {
+      @media screen and (max-width: 768px) {
+        font-size: 0.8rem;
+      }
       text-align: center;
     }
   }
@@ -60,6 +67,11 @@ const pages = [
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 768px) {
+      height: 10vh;
+      margin-top: -1rem;
+    }
+
 
     button {
       background-color: transparent;
@@ -69,10 +81,16 @@ const pages = [
 
     img {
       height: 18vh;
+      @media screen and (max-width: 768px) {
+        height: 10vh;
+      }
       cursor: pointer;
       transition: box-shadow 0.2s ease-out;
       border-radius: 8px;
       margin: 4vh 0 0 4vw;
+      @media screen and (max-width: 768px) {
+        margin: 0 0 0 2;
+      }
 
       &:hover,
       &:focus {
@@ -91,6 +109,9 @@ const pages = [
         text-transform: uppercase;
         font-weight: bold;
         font-size: 3vh;
+        @media screen and (max-width: 768px) {
+          font-size: 1vh;
+        }
         cursor: pointer;
         display: inline-block;
         position: relative;

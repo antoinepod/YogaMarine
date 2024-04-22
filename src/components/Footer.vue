@@ -39,6 +39,9 @@ footer {
     text-decoration: none;
     color: v-bind(color);
     font-size: 2vh;
+    @media screen and (max-width: 768px) {
+      font-size: 0.6rem;
+    }
   }
 
   .legal:hover {
@@ -49,6 +52,9 @@ footer {
   p {
     margin: 0;
     font-size: 2vh;
+    @media screen and (max-width: 768px) {
+      font-size: 0.6rem;
+    }
     width: 33%;
 
     a {
@@ -67,6 +73,9 @@ footer {
     justify-content: center;
     width: 33%;
     font-size: 2vh;
+    @media screen and (max-width: 768px) {
+      font-size: 0.6rem;
+    }
 
     .mail {
       color: v-bind(color);

@@ -45,7 +45,7 @@
       </div>
       <img src="/lessons.jpeg" alt="">
     </div>
-    <Footer class="footer" color="black"></Footer>
+    <!-- <Footer class="footer" color="black"></Footer> -->
   </div>
 </template>
 

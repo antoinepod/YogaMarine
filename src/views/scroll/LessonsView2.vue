@@ -11,7 +11,7 @@
       </RoundedButton>
       <p>Précisez moi votre besoin, adresse postale pour le cours, téléphone portable... Et je reviens vers vous<br>pour organiser une pratique adaptée.</p>
     </div>
-    <Footer class="footer" color="white"></Footer>
+    <!-- <Footer class="footer" color="white"></Footer> -->
   </div>
 </template>
 
