@@ -33,13 +33,11 @@
     <RoundedButton class="about-button" href="#yoga-vinyasa">
       à propos du yoga vinyasa
     </RoundedButton>
-    <!-- <Footer class="footer" color="black"></Footer> -->
   </div>
 </template>
 
 <script setup>
 import RoundedButton from "@/components/buttons/RoundedButton.vue";
-import Footer from "@/components/Footer.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -52,10 +50,10 @@ import Footer from "@/components/Footer.vue";
 
   .horizontal-container {
     display: flex;
-    justify-content: top;
+    justify-content: center;
     align-items: top;
     flex-direction: row;
-    height: 85%;
+    height: 90%;
 
     img {
       position: relative;
@@ -66,14 +64,13 @@ import Footer from "@/components/Footer.vue";
     }
 
     .text-container {
-      width: 47%;
-      padding: 2%;
-      margin-top: 5%;
-      margin-left: 1.5%;
+      height: 100%;
+      width: 50%;
+      margin: auto 4rem;
       text-align: justify;
       text-justify: inter-word;
       color: black;
-      overflow: auto;
+      overflow-x: auto;
 
       h4 {
         text-align: right;
@@ -84,18 +81,24 @@ import Footer from "@/components/Footer.vue";
         color: var(--blue-buttons);
       }
     }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+
+      .text-container {
+        width: unset;
+        margin: 0;
+        padding: 1rem 1rem 0 1rem;
+      }
+    }
   }
 
   .about-button {
-    margin-top: 2%;
-  }
-
-  .footer {
-    z-index: 1;
-    position: absolute;
-    bottom: 1rem;
-    width: 100%;
-    height: 3rem;
+    margin: auto;
   }
 }
 </style>

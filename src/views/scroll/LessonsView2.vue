@@ -1,11 +1,11 @@
 <template>
   <div class="reservation-container">
     <div class="main-container">
-      <h2>
+      <h3>
         cours particuliers
-      </h2>
-      <h4>● chez vous, une séance à votre rythme, le matériel est tout ou partie mit à disposition</h4>
-      <h4>● tarif recommandé: 20€/personne (majoré selon le lieu, dégressif avec le nombre de pratiquants)</h4>
+      </h3>
+      <h5>● chez vous, une séance à votre rythme, le matériel est tout ou partie mit à disposition</h5>
+      <h5>● tarif recommandé: 20€/personne (majoré selon le lieu, dégressif avec le nombre de pratiquants)</h5>
       <RoundedButton class="button" href="mailto:contact@yogamarine.fr?subject=Demande de cours particulier">
         Demandez un cours particulier
       </RoundedButton>
@@ -38,36 +38,30 @@ import Footer from "@/components/Footer.vue";
     justify-content: center;
     flex-direction: column;
 
-    h2 {
+    h3 {
       text-transform: uppercase;
       color: var(--blue-buttons);
     }
 
-    h4 {
+    h5 {
       color: var(--white);
       text-transform: uppercase;
       margin-left: 4rem;
       font-weight: bolder;
+
+      @media screen and (max-width: 768px) {
+        margin-left: 2rem;
+      }
     }
 
     .button {
-      margin: 2vh auto;
+      margin: 2rem auto;
     }
 
     p {
       text-align: right;
       color: var(--white);
     }
-  }
-
-
-
-  .footer {
-    z-index: 1;
-    position: absolute;
-    bottom: 1rem;
-    width: 100%;
-    height: 3rem;
   }
 }
 </style>

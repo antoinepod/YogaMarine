@@ -3,15 +3,16 @@
     <div class="horizontal-container">
       <div class="left-container">
         <div class="text-container">
-          <h3 class="keep-title">
+          <h4 class="keep-title">
             Tissons un lien, ou gardons le
-          </h3>
+          </h4>
           <p>
             N'hésitez pas à parler de mon projet à vos proches. Vous pouvez aussi suivre mes inspirations sur Instagram.
             Et si vous avez des questions, je suis à votre écoute !
           </p>
         </div>
-        <iframe class="instagram-embed" src="https://www.instagram.com/_yogamarine_/embed/" height="306" width="306" frameborder="0" scrolling="no"></iframe>
+        <iframe class="instagram-embed" src="https://www.instagram.com/_yogamarine_/embed/" height="306" width="306"
+          frameborder="0" scrolling="no"></iframe>
       </div>
       <img src="/contact2.jpeg" alt="">
     </div>
@@ -27,7 +28,7 @@ import Footer from "@/components/Footer.vue";
 .contact-container {
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
   flex-direction: column;
 
@@ -36,21 +37,27 @@ import Footer from "@/components/Footer.vue";
     justify-content: top;
     align-items: top;
     flex-direction: row;
+
     @media screen and (max-width: 768px) {
       flex-direction: column;
     }
-    height: 100%;
+
+    height: 90%;
 
     .left-container {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 45%;
+      width: 50%;
+      margin: auto 4rem;
+
       @media screen and (max-width: 768px) {
         width: 90vw;
+        height: 55%;
         margin: auto;
       }
+
       height: 100%;
       padding: 2%;
       margin-top: 3%;
@@ -59,7 +66,7 @@ import Footer from "@/components/Footer.vue";
 
       .text-container {
         margin-top: 12%;
-        
+
         .keep-title {
           color: var(--blue-buttons);
           text-transform: uppercase;
@@ -68,28 +75,37 @@ import Footer from "@/components/Footer.vue";
 
       .instagram-embed {
         max-width: 100%;
-        min-height: 350px;
+        min-height: 22rem;
+        max-height: 30%;
         margin: auto;
         margin-top: 0;
         margin-bottom: 10vh;
+
         @media screen and (max-width: 768px) {
-          margin-bottom: 0;
+          margin-bottom: 4rem;
         }
       }
     }
 
 
     img {
+      position: relative;
+      top: 0;
+      right: 0;
       width: 50%;
-      @media screen and (max-width: 768px) {
-        width: 90%;
-        height: 22vh;
-        margin: auto;
-        margin-bottom: 2vh !important;
-        border-radius: 1rem;
-      }
-      margin-bottom: 10vh;
       object-fit: cover;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: unset;
+      height: 90%;
+      margin: 0;
+
+      img {
+        width: 60%;
+        border-radius: 2rem;
+        margin: 0 auto;
+      }
     }
   }
 

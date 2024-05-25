@@ -1,11 +1,12 @@
 <template>
   <div class="home-container">
     <div class="text-container">
-      <h4 class="title">
+      <h1 class="title">YOGAMARINE</h1>
+      <h4 class="subtitle">
         Intéressée par les sujets du développement humain, j’explore l'approche du corps, de l'esprit et de la vie,
         notamment par le Yoga.
       </h4>
-      <p class="subtitle">
+      <p class="description">
         Formée au Yoga par un 200h inclusif, certifié Yoga Alliances, je souhaite transmettre le Vinyasa. Cette pratique
         invite à l’apaisement mental, à l’introspection spirituelle et à la vitalité physique.
         <br><br>
@@ -28,27 +29,32 @@ import Footer from "@/components/Footer.vue";
 .home-container {
   height: 100%;
   display: flex;
-  align-items: right;
+  align-items: center;
   flex-direction: column;
   color: white;
-  text-align: right;
   background-image: url("/home.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 
   .text-container {
-    margin-left: 8%;
-    margin-right: 8%;
-    margin-top: 2%;
+    width: 80%;
+    margin: auto;
+
+
     .title {
-      text-transform: uppercase;
-      margin-top: 13%;
-      margin-bottom: 2%;
+      text-align: center;
+      margin: 4rem auto;
     }
 
     .subtitle {
-      font-size: 2vh;
+      text-transform: uppercase;
+      text-align: justify;
+      margin: 2rem auto;
+    }
+
+    .description {
+      text-align: right;
     }
   }
 

@@ -35,7 +35,6 @@ button {
   transition: transform 0.2s ease-out, box-shadow 0.25s ease-out;
   font-family: 'Lovelo';
   font-weight: bold;
-  font-size: 2vh;
 
   &:hover {
     box-shadow: 0 0.5em 0.5em -0.4em #1F6AFD;
