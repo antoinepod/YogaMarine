@@ -4,11 +4,11 @@
       <p>Bienvenue dans cet univers personnel et professionnel de bien être.</p>
     </div>
     <div class="nav-container">
-      <a href="#accueil">
+      <a @click="scrollTo('#accueil')">
         <img src="/logo.png" alt="" />
       </a>
       <div class="titles-container">
-        <a v-for="page in pages" :href="page.href" :class="isActive(page.href)">{{ page.title }}</a>
+        <a v-for="page in pages" @click="scrollTo(page.href)" :class="isActive(page.href)">{{ page.title }}</a>
       </div>
     </div>
   </div>
@@ -19,8 +19,13 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
+function scrollTo(id) {
+  const element = document.querySelector(id);
+  element.scrollIntoView();
+}
+
 function isActive(text) {
-  if (text === router.currentRoute.value.hash)
+  if (router.currentRoute.value.hash && router.currentRoute.value.hash === text)
     return 'active';
   return 'inactive';
 };
@@ -42,9 +47,6 @@ const pages = [
   .top-header {
     background-color: var(--blue-logo);
     height: 4vh;
-    @media screen and (max-width: 768px) {
-      height: 4vh;
-    }
     display: flex;
     justify-content: center;
     align-items: center;

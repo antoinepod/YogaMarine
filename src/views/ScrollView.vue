@@ -21,7 +21,7 @@ import LessonsView from "@/views/scroll/LessonsView.vue";
 import ContactView from "@/views/scroll/ContactView.vue";
 import LessonsView2 from "@/views/scroll/LessonsView2.vue";
 
-import { onBeforeMount, ref } from "vue";
+import { onBeforeMount, onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -38,12 +38,16 @@ const pages = [
 
 function onScroll() {
   const page = Math.round(pages.length * scroll.value.scrollTop / scroll.value.scrollHeight);
-  console.log(page, pages[page]);
   router.push({ name: "Scroll", hash: `#${pages[page]}` });
 }
 
-onBeforeMount(() => {
-  router.push({ name: "Scroll", hash: "#accueil" });
+onMounted(() => {
+  const page = router.currentRoute.value.hash;
+  if (page) {
+    console.log("page", page);
+    const element = document.querySelector(page);
+    element.scrollIntoView();
+  }
 });
 </script>
 

@@ -11,10 +11,7 @@
             Et si vous avez des questions, je suis à votre écoute !
           </p>
         </div>
-        <iframe class="instagram-embed" src="https://www.instagram.com/_yogamarine_/embed/" frameborder="0" scrolling="no"></iframe>
-        <!-- <RoundedButton class="instagram-button" href="https://www.instagram.com/_yogamarine_/">
-          coup d'œil sur instagram
-        </RoundedButton> -->
+        <iframe class="instagram-embed" src="https://www.instagram.com/_yogamarine_/embed/" height="306" width="306" frameborder="0" scrolling="no"></iframe>
       </div>
       <img src="/contact2.jpeg" alt="">
     </div>
@@ -23,7 +20,6 @@
 </template>
 
 <script setup>
-import RoundedButton from "@/components/buttons/RoundedButton.vue";
 import Footer from "@/components/Footer.vue";
 </script>
 
@@ -47,12 +43,13 @@ import Footer from "@/components/Footer.vue";
 
     .left-container {
       display: flex;
-      justify-content: top;
+      justify-content: center;
       align-items: center;
       flex-direction: column;
       width: 45%;
       @media screen and (max-width: 768px) {
         width: 90vw;
+        margin: auto;
       }
       height: 100%;
       padding: 2%;
@@ -70,16 +67,14 @@ import Footer from "@/components/Footer.vue";
       }
 
       .instagram-embed {
-        margin-top: -1.2rem;
+        max-width: 100%;
+        min-height: 350px;
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 10vh;
         @media screen and (max-width: 768px) {
-          width: 100%;
+          margin-bottom: 0;
         }
-        width: 70%;
-        height: 100%;
-      }
-
-      .instagram-button {
-        margin-top: 1%;
       }
     }
 
@@ -87,12 +82,13 @@ import Footer from "@/components/Footer.vue";
     img {
       width: 50%;
       @media screen and (max-width: 768px) {
-        width: 80%;
+        width: 90%;
+        height: 22vh;
         margin: auto;
-        margin-bottom: 4rem;
+        margin-bottom: 2vh !important;
         border-radius: 1rem;
       }
-      margin-bottom: 10%;
+      margin-bottom: 10vh;
       object-fit: cover;
     }
   }
