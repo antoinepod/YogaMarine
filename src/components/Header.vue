@@ -46,7 +46,7 @@ const pages = [
 
   .top-header {
     background-color: var(--blue-logo);
-    height: 4vh;
+    height: 4dvh;
     display: flex;
     justify-content: center;
     align-items: center;

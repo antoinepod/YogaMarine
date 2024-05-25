@@ -56,13 +56,13 @@ onMounted(() => {
   z-index: 1;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100dvw;
 }
 
 .scroll-container {
-  top: 4vh;
+  top: 4dvh;
   width: 100vw;
-  height: 96vh;
+  height: 96dvh;
   scroll-behavior: smooth;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;

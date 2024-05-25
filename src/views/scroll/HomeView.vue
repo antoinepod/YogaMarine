@@ -9,10 +9,12 @@
       <p class="description">
         Formée au Yoga par un 200h inclusif, certifié Yoga Alliances, je souhaite transmettre le Vinyasa. Cette pratique
         invite à l’apaisement mental, à l’introspection spirituelle et à la vitalité physique.
-        <br><br>
-        J'ai à coeur de partager cette discipline de manière accessible, authentique, et surtout libre selon ce qu'elle
-        peut vous offrir.
-        <br><br>
+      </p>
+      <p class="description">
+        J'ai à coeur de partager cette discipline de manière accessible, authentique, et surtout
+        libre selon ce qu'elle peut vous offrir.
+      </p>
+      <p class="description">
         Par ma courte expérience de yoga, mais avec ce qu'elle m'a déjà tant apporté, je propose des cours, <u>quel que
           soit votre niveau ou connaissance du Yoga</u>.
       </p>
