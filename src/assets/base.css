@@ -30,6 +30,14 @@
   --color-text: var(--vt-c-text-light-1);
 
   --section-gap: 160px;
+
+
+  --blue-logo: #1F6AFD;
+  --blue-intense: #0000E2;
+  --blue-buttons: #085BF8;
+  --blue-background: #4052ed;
+  --white: #FFFFFF;
+  --orange: #EF490C;
 }
 
 *,
@@ -52,4 +60,84 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Lovelo */
+@font-face {
+  font-family: "Lovelo";
+  src: url("/Lovelo Black.otf") format("opentype");
+}
+
+/* Nourd */
+@font-face {
+  font-family: "Nourd";
+  src: url("/nourd_light.ttf") format("truetype");
+}
+
+p {
+  font-family: "Nourd";
+  font-size: 1.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lovelo";
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+}
+
+lbr {
+  display: block;
+  margin: 2vh 0;
+  content: "";
 }

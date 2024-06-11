@@ -1,28 +1,26 @@
 <template>
-  <div class="container">
-    <Header/>
-    <RouterView/>
-    <div class="footer-container">
-      <Footer/>
-    </div>
-  </div>
+  <body>
+    <RouterView class="router" />
+  </body>
 </template>
 
 <script setup>
-import {RouterView} from "vue-router";
-
-import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
+import { RouterView } from "vue-router";
 </script>
 
-<style scoped>
-.container {
-  /*background-color: red;*/
-  /*margin: 0;*/
-  /*padding: 0;*/
-}
+<style lang="scss" scoped>
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 
-.footer-container {
-  height: 40px;
+  .router {
+    width: 100vw;
+    height: 96vh;
+    margin: 0;
+    padding: 0;
+  }
 }
 </style>
