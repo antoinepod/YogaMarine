@@ -73,10 +73,11 @@ import RoundedButton from "@/components/buttons/RoundedButton.vue";
       align-items: center;
       flex-direction: column;
       width: 50%;
-      padding: 2rem;
-      margin: auto 4rem;
+      height: 80%;
+      margin: auto 2rem;
+      padding: 1rem;
+      margin-top: 8rem;
       color: black;
-      height: 100%;
       overflow-x: auto;
 
       .lesson-type {

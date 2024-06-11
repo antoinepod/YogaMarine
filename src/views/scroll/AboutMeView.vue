@@ -64,9 +64,11 @@ import RoundedButton from "@/components/buttons/RoundedButton.vue";
     }
 
     .text-container {
-      height: 100%;
+      height: 80%;
       width: 50%;
-      margin: auto 4rem;
+      margin: auto 2rem;
+      padding: 1rem;
+      margin-top: 8rem;
       text-align: justify;
       text-justify: inter-word;
       color: black;

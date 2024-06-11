@@ -50,12 +50,13 @@ import Footer from "@/components/Footer.vue";
       align-items: center;
       flex-direction: column;
       width: 50%;
-      margin: auto 4rem;
+      margin: auto 2rem;
 
       @media screen and (max-width: 768px) {
         width: 90vw;
         height: 55%;
-        margin: auto;
+        margin: auto 2rem;
+        padding-top: 2rem;
       }
 
       height: 100%;

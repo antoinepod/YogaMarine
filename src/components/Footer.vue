@@ -1,7 +1,7 @@
 <template>
   <footer>
     <RouterLink to="/mentions-legales" class="legal">MENTIONS LÉGALES – CGV</RouterLink>
-    <p>©2023 YOGAMARINE - Site crée par <a target="_blank" href="https://www.linkedin.com/in/antoine-podvin/">Antoine
+    <p>©2023 YOGAMARINE - Site crée par <a target="_blank" href="https://www.antoine-podvin.fr/">Antoine
         Podvin</a></p>
     <div class="links">
       <a class="mail" target="_blank" href="mailto:contact@yogamarine.fr"><i class="fa fa-envelope"></i>
