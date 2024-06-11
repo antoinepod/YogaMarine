@@ -1,90 +1,149 @@
 <template>
-  <div class="container">
-    <RouterLink to="/" class="image"><img src="/logo.png" alt=""/></RouterLink>
-    <RouterLink to="/qui-suis-je" class="title">Qui suis-je</RouterLink>
-    <RouterLink to="/yoga-vinyasa" class="title">Yoga Vinyasa</RouterLink>
-    <RouterLink to="/demande-et-reservation" class="title">Demande et réservation</RouterLink>
-    <RouterLink to="/contact" class="title">Contact</RouterLink>
+  <div class="header-container">
+    <div class="top-header">
+      <p>Bienvenue dans cet univers personnel et professionnel de bien être.</p>
+    </div>
+    <div class="nav-container">
+      <a @click="scrollTo('#accueil')">
+        <img src="/logo.png" alt="" />
+      </a>
+      <div class="titles-container">
+        <a v-for="page in pages" @click="scrollTo(page.href)" :class="isActive(page.href)">{{ page.title }}</a>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+function scrollTo(id) {
+  const element = document.querySelector(id);
+  element.scrollIntoView();
+}
+
+function isActive(text) {
+  if (router.currentRoute.value.hash && router.currentRoute.value.hash === text)
+    return 'active';
+  return 'inactive';
+};
+
+const pages = [
+  { href: '#qui-suis-je', title: "Qui suis-je" },
+  { href: '#yoga-vinyasa', title: "Yoga Vinyasa" },
+  { href: '#cours-et-prestations', title: "Cours et prestations" },
+  { href: '#contact', title: "Contact" }
+]
 </script>
 
-<style scoped>
-.container {
-  height: 13vh;
+<style lang="scss" scoped>
+.header-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 30px 50px 15px;
-}
+  flex-direction: column;
+  justify-content: center;
 
-.image {
-  height: 18vh;
-  cursor: pointer;
-  transition: .2s ease-in-out;
-  border-radius: 10px;
-  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
-  -6px -6px 10px rgba(255, 255, 255, .5),
-  6px 6px 8px rgba(255, 255, 255, .075),
-  6px 6px 10px rgba(0, 0, 0, .15);
-}
+  .top-header {
+    background-color: var(--blue-logo);
+    height: 4dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 2vh;
+    width: 100%;
+    
 
-img {
-  height: 100%;
-}
+    p {
+      @media screen and (max-width: 768px) {
+        font-size: 0.8rem;
+      }
+      text-align: center;
+    }
+  }
 
-.image:hover {
-  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
-  -2px -2px 4px rgba(255, 255, 255, .4),
-  2px 2px 2px rgba(255, 255, 255, .05),
-  2px 2px 4px rgba(0, 0, 0, .1);
-}
+  .nav-container {
+    height: 15vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      height: 10vh;
+      margin-top: -1rem;
+    }
 
-.image:active {
-  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
-  inset -2px -2px 4px rgba(255, 255, 255, .5),
-  inset 2px 2px 2px rgba(255, 255, 255, .075),
-  inset 2px 2px 4px rgba(0, 0, 0, .15);
-}
 
-.title {
-  height: 8vh;
-  color: #4e69ef;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 25px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: .2s ease-in-out;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
-  -6px -6px 10px rgba(255, 255, 255, .5),
-  6px 6px 8px rgba(255, 255, 255, .075),
-  6px 6px 10px rgba(0, 0, 0, .15);
-}
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
 
-.title:hover {
-  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
-  -2px -2px 4px rgba(255, 255, 255, .4),
-  2px 2px 2px rgba(255, 255, 255, .05),
-  2px 2px 4px rgba(0, 0, 0, .1);
-}
+    img {
+      height: 18vh;
+      @media screen and (max-width: 768px) {
+        height: 10vh;
+      }
+      cursor: pointer;
+      transition: box-shadow 0.2s ease-out;
+      border-radius: 8px;
+      margin: 4vh 0 0 4vw;
+      @media screen and (max-width: 768px) {
+        margin: 0 0 0 2;
+      }
 
-.title:active {
-  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
-  inset -2px -2px 4px rgba(255, 255, 255, .5),
-  inset 2px 2px 2px rgba(255, 255, 255, .075),
-  inset 2px 2px 4px rgba(0, 0, 0, .15);
-}
+      &:hover,
+      &:focus {
+        box-shadow: 0.5em 0.5em 0.5em -0.4em var(--blue-logo);
+        transition: box-shadow 0.2s ease-out;
+      }
+    }
 
-.router-link-active {
-  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
-  -2px -2px 4px rgba(255, 255, 255, .4),
-  2px 2px 2px rgba(255, 255, 255, .05),
-  2px 2px 4px rgba(0, 0, 0, .1);
-}
+    .titles-container {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
 
+      a {
+        color: var(--blue-buttons);
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 3vh;
+        @media screen and (max-width: 768px) {
+          font-size: 1vh;
+        }
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+      }
+
+      a::after {
+        content: '';
+        position: absolute;
+        border-radius: 20px;
+        height: 2.5px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin-left: 0;
+        transform: scaleX(0);
+        background-color: currentColor;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      .active {
+        color: white;
+      }
+    }
+  }
+}
 </style>
